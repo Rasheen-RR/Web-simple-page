@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "Loop";
+
+    List<string> loopItems = new List<String>();
+    loopItems.Add("Cshtml Loop item 1");
+    loopItems.Add("Cshtml Loop item 2");
+    loopItems.Add("Cshtml Loop item 3");
+    loopItems.Add("Cshtml Loop item 4");
+    loopItems.Add("Cshtml Loop item 5");
+    loopItems.Add("Cshtml Loop item 6");
+}
+
+
+
+<div class="nav-container">
+    <div class="showcase-nav fixed-nav">
+        <div class="showcase-nav-content">
+            <a href="#!">Home</a>
+            <a href="#!">Blog</a>
+            <a href="#!">Categories</a>
+            <a href="#!">Contact</a>
+        </div>
+    </div>
+</div>
+
+<div class="showcase">
+    <div class="showcase-wrapper">
+        <div class="showcase-content">
+            <div class="showcase-header">
+                <div class="showcase-header-content">
+                    <div class="showcase-header-name">
+                        Rasheens Blog
+                    </div>
+                    <div class="showcase-header-text">
+                        Personal Blog
+                    </div>
+                    <div class="showcase-social-icons">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-linkedin"></i>
+                        <i class="fa fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-nav" id="main-nav">
+                <div class="showcase-nav-content">
+                    <a href="#!">Home</a>
+                    <a href="#!">Blog</a>
+                    <a href="#!">Categories</a>
+                    <a href="#!">Contact</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="blog-content-single-blog">
+            <div class="blog-main-content">
+                <div class="blog-post-content-container">
+                    <div class="blog-post-image-container">
+                        <div class="blog-post-type">
+                            Travel
+                        </div>
+                        <div class="blog-post-image">
+                            <div class="blog-post-image-wrapper">
+                                <img src="~/img/XHJGKq.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-post-text-container">
+                        <div class="main-blog-post-date">
+                            20 JUN 2016
+                        </div>
+                        <div class="main-blog-post-header">
+                            Loop
+                        </div>
+
+                        <hr>
+
+
+                        <div class="main-blog-post-author">
+                            Post by Jane Doe
+                        </div>
+
+                        <div class="main-blog-post-text">
+
+                            <h4>Cshtml array</h4>
+                            <ul id="">
+                                @foreach (var item in loopItems)
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+
+
+                            <h4>Controller array</h4>
+                            <ul id="">
+                                @foreach (var item in ViewBag.controllerLoopItems)
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="main-blog-post-footer">
+                        <div class="main-blog-post-author-social">
+                            <i class="fa fa-facebook fa-2x"></i>
+                            <i class="fa fa-twitter fa-2x"></i>
+                            <i class="fa fa-linkedin fa-2x"></i>
+                            <i class="fa fa-instagram fa-2x"></i>
+                        </div>
+                    </div>
+
+
+
+                    <div class="main-blog-post-next-prev">
+                        <a href="/Home/Blog">
+                            <div class="post previous-post">
+                                <div class="post-image-container">
+                                    <img src="~/img/wp1889226.jpg" alt="">
+                                </div>
+                                <div class="post-text-container">
+                                    <div class="post-text-header">
+                                        PREVIOUS POST
+                                    </div>
+                                    <div class="post-text-title">
+                                        Blog
+                                    </div>
+                                </div>
+                            </div>
+
+                        </a>
+
+                        <a href="/Home/Requests">
+                            <div class="post next-post">
+                                <div class="post-text-container">
+                                    <div class="post-text-header">
+                                        NEXT POST
+                                    </div>
+                                    <div class="post-text-title">
+                                        Request
+                                    </div>
+                                </div>
+                                <div class="post-image-container">
+                                    <img src="~/img/wp1889226.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
